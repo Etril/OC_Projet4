@@ -120,6 +120,7 @@
       $(`#${lightboxId}`).modal("toggle");
     },
     prevImage() {
+      console.log("prevImage");
       let activeImage = null;
       $("img.gallery-item").each(function() {
         if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
@@ -145,12 +146,13 @@
           }
         });
       }
+      
       let index = 0,
         next = null;
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i ;
+          index = i-1 ;
         }
       });
       next =
@@ -183,17 +185,21 @@
             imagesCollection.push($(this).children("img"));
           }
         });
+        console.log(imagesCollection);
       }
       let index = 0,
-        next = null;
+      next = null;
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i;
+          index = (i+1);
         }
       });
       next = imagesCollection[index] || imagesCollection[0];
       $(".lightboxImage").attr("src", $(next).attr("src"));
+      console.log(index);
+      console.log(next);
+      console.log($(next).attr("src"));
     },
     createLightBox(gallery, lightboxId, navigation) {
       gallery.append(`<div class="modal fade" id="${
