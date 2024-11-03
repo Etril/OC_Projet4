@@ -28,16 +28,33 @@
 	<script src="./assets/maugallery.js"></script>
 	<script src="./assets/scripts.js"></script>
 </head>
-<body>
+<body itemscope itemtype="https://schema.org/WebPage">
 <div class="top-header">
-	<h3 class="name">Nina Carducci</h3>
-	<div class="nav">   
+	<div itemscope itemtype="https://schema.org/Service">
+		<meta itemprop="serviceType" content="Photographie">
+		<div itemprop="provider" itemscope itemtype="https://schema.org/LocalBusiness">
+			<span itemprop ="name"><h3 class="name">Nina Carducci Photographie</h3> </span>
+			<div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+				<meta itemprop="streetAddress" content="68 avenue Alsace-Lorraine">
+				<meta itemprop="addressLocality" content="Bordeaux">
+				<meta itemprop="addressRegion" content="Nouvelle-Aquitaine">
+				<meta itemprop="postalCode" content="33200">
+				<meta itemprop="addressCountry" content="France">
+			</div>
+			<meta itemprop="telephone" content="05 56 67 78 89">
+			<meta itemprop="openingHours" content="lundi au vendredi de 10 h à 19 h">
+			<meta itemprop="image" content="https://etril.github.io/OC_Projet4/assets/images/webp/OG-picture.webp">
+			<meta itemprop="priceRange" content="50-400€">
+		</div>
+	</div>
+	<div class="nav" itemprop="breadcrumb">   
 		<ul>
 			<li><a href="#about">À propos</a></li>
 			<li><a href="#gallery">Galerie</a></li>
 			<li><a href="#services">Service</a></li>
 			<li><a href="#contact">Contact</a></li>
 			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.png" alt="Lien instagram"></a></li>
+			</div>
 		</ul>
 	</div>
 </div>
@@ -78,7 +95,7 @@
 </div>
 <div id="about">
 	<div class="picture left">
-		<img src="./assets/images/webp/nina-400w.webp" alt="Portrait de l'artiste">
+		<img itemprop="image" src="./assets/images/webp/nina-400w.webp" alt="Portrait de l'artiste">
 	</div>
 	<div id="about-me">
 		<h3 class="about-me__title">A propos de moi</h3>
@@ -115,37 +132,58 @@
 	<h3 class="title">Mes services</h3>
 	<div class="container">
 		<div class="service">
+			<div itemscope itemtype="https://schema.org/Product">
+			<meta itemprop="name" content="Shooting Photo">
+			<link itemprop="image" href="https://etril.github.io/OC_Projet4/assets/images/webp/OG-picture.webp">
+			<meta itemprop="description" content="Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos">
 			<div class="service__description">
-				<h3>Shooting photo</h3>
+				<span itemprop="name"> <h3>Shooting photo</h3> </span>
 				<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos</p>
 			</div>
 			<div class="service__price">
-				<h4>350€/demi journée</h4>
+				<div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+				<h4> <span itemprop="price" content= "350">350
+					</span><span itemprop="priceCurrency" content="EUR">€</span>/demi journée</h4>
+				</div>
 				<span>Matériel, déplacement inclus</span>
 			</div>
-
+		</div>
 		</div>
 		<div class="service">
-			<div class="service__description">
+			<div itemscope itemtype="https://schema.org/Product">
+				<meta itemprop="name" content="Retouches">
+				<link itemprop="image" href="https://etril.github.io/OC_Projet4/assets/images/webp/OG-picture.webp">
+				<meta itemprop="description" content="Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications">
+			<div class="service__description"> 
 				<h3>Retouches</h3>
 				<p>Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications</p>
 			</div>
 			<div class="service__price">
-				<h4>50€/photo</h4>
+				<div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+				<h4><span itemprop="price" content= "50">50</span><span itemprop="priceCurrency" content="EUR">€</span>/photo</h4>
 				<span>2 AR par photo</span>
+				</div>
 			</div>
 		</div>
+		</div>
 		<div class="service">
+			<div itemscope itemtype="https://schema.org/Product">
+				<meta itemprop="name" content="Album photos">
+				<link itemprop="image" href="https://etril.github.io/OC_Projet4/assets/images/webp/OG-picture.webp">
+				<meta itemprop="description" content="Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un album photo personnalisé">
 			<div class="service__description">
 				<h3>Album photos</h3>
 				<p>Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un album photo personnalisé</p>
 			</div>
 			<div class="service__price">
-				<h4>400€ album A4</h4>
+				<div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+				<h4> <span itemprop="price" content= "400">400</span> <span itemprop="priceCurrency" content="EUR">€</span>album A4</h4>
 				<span>30 pages recto/verso</span>
+				</div>
 			</div>
 		</div>
 	</div>
+</div>
 </div>
 <div class="quote">
 	<figure>
