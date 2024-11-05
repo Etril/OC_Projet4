@@ -6,7 +6,7 @@ body {
 	font-family: 'Inter';
 	font-style: normal;
 }
-.top-header {
+header {
 	background-color: white;
 	position: sticky;
 	top:0;
@@ -84,8 +84,13 @@ body {
 	font-weight: 800;
 	font-style: italic;
 	width: 60%;
+	font-size: 1rem;
+	margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
 }
-#about-me p {
+
+.about-me__text {
 	width: 80%;
 	font-size: 14px;
 }
@@ -107,7 +112,7 @@ body {
 }
 .nav-pills .nav-link.active-tag, .nav-pills .show > .nav-link {
 	color: #fff;
-	background-color: #BEB45A;
+	background-color: #7E742F;
 	border-radius:0 ;
 }
 .nav-pills .nav-link {
@@ -152,8 +157,24 @@ body {
 	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
+	font-size: calc(1.375rem + 1.5vw);
+	margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+	line-height: 1.2;
 
 }
+
+blockquote {
+    margin: 0 0 1rem;
+}
+
+figure {
+    margin: 0 0 1rem;
+}
+
 .quote__author {
 	font-family: Spectral;
 	font-weight: 800;
@@ -359,3 +380,14 @@ input[type="submit"] {
 	}
 }
 
+h1 {
+	font-size: 26px;
+}
+
+h2, .h2 {
+    font-size: calc(1.3rem + 0.6vw);
+}
+
+h4, .h4 {
+    font-size: calc(1.275rem + 0.3vw);
+}
